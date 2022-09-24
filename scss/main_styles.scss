@@ -26,19 +26,19 @@ $padding-area: 2.5rem;
 // font-size
 $title: 1.5rem;
 $sub-title: 1rem;
-$paragraph: 16px;
+$paragraph: 1rem;
 $line-height-pg: 1.5rem;
 
 // border radius
 $main-border-radius: .5rem;
 
 .container{
-    margin: 24px;
+    margin: 1.5rem;
     grid-template-areas: 
                 'up up'
                 'left right';
     grid-template-columns: 1fr 1fr;
-    max-width: 680px;
+    max-width: 42.5rem;
     .wrapper{
         width: 100%;
         padding: $padding-area;
@@ -114,15 +114,24 @@ $main-border-radius: .5rem;
         font-size: $sub-title;
         font-weight: bold;
     }
+
+    &.left .btn:hover{
+        cursor: pointer;
+        color:var(--color-Cyan);
+        background-color: #fff;
+        transition: ease 1s;
+
+    }
     
     &.right .detail{
         color: var(--color-LightGray);
     }
     
-    
 }
 
-@media (min-width: 768px) {
+
+
+@media (min-width: 48rem) {
     .container{
         display: grid;
 
@@ -132,7 +141,7 @@ $main-border-radius: .5rem;
     }
 }
 
-@media (max-width:767px) {
+@media (max-width:47.938rem) {
     .wrapper{
         padding: 2rem;
 

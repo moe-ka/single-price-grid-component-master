@@ -18,10 +18,10 @@ body {
 }
 
 .container {
-  margin: 24px;
+  margin: 1.5rem;
   grid-template-areas: "up up" "left right";
   grid-template-columns: 1fr 1fr;
-  max-width: 680px;
+  max-width: 42.5rem;
 }
 .container .wrapper {
   width: 100%;
@@ -62,7 +62,7 @@ body {
 }
 .wrapper .detail {
   line-height: 1.5rem;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .wrapper.up .detail {
   color: var(--GrayishBlue);
@@ -75,7 +75,7 @@ body {
 }
 .wrapper.left .price span {
   color: var(--color-LightGray);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
   position: relative;
   top: -0.3rem;
@@ -94,11 +94,17 @@ body {
   font-size: 1rem;
   font-weight: bold;
 }
+.wrapper.left .btn:hover {
+  cursor: pointer;
+  color: var(--color-Cyan);
+  background-color: #fff;
+  transition: ease 1s;
+}
 .wrapper.right .detail {
   color: var(--color-LightGray);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .container {
     display: grid;
   }
@@ -106,7 +112,7 @@ body {
     border-radius: 0 0 0 0.5rem;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 47.938rem) {
   .wrapper {
     padding: 2rem;
   }
