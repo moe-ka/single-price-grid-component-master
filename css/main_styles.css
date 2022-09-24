@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+:root {
+  /* color primary */
+  --color-Cyan: hsl(179, 62%, 43%);
+  --color-BrightYellow: hsl(71, 73%, 54%);
+  --color-LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+  --font: "Karla", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--color-LightGray);
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font);
+}
+
+.container {
+  margin: 24px;
+  grid-template-areas: "up up" "left right";
+  grid-template-columns: 1fr 1fr;
+  max-width: 680px;
+}
+.container .wrapper {
+  width: 100%;
+  padding: 2.5rem;
+}
+.container .up {
+  grid-area: up;
+  background-color: #fff;
+  padding-right: 3.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.container .left {
+  grid-area: left;
+  background-color: var(--color-Cyan);
+  display: flex;
+  flex-direction: column;
+}
+.container .right {
+  grid-area: right;
+  background-color: rgba(42, 178, 175, 0.8);
+  padding-right: 4rem;
+  border-radius: 0 0 0.5rem 0;
+}
+
+.wrapper .title {
+  color: var(--color-Cyan);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.wrapper .sub-title {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+}
+.wrapper.up .sub-title {
+  color: var(--color-BrightYellow);
+  margin-bottom: 0.5rem;
+}
+.wrapper .detail {
+  line-height: 1.5rem;
+  font-size: 16px;
+}
+.wrapper.up .detail {
+  color: var(--GrayishBlue);
+}
+.wrapper.left .price {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+.wrapper.left .price span {
+  color: var(--color-LightGray);
+  font-size: 16px;
+  font-weight: normal;
+  position: relative;
+  top: -0.3rem;
+}
+.wrapper.left .detail {
+  color: #fff;
+  margin-bottom: auto;
+}
+.wrapper.left .btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--color-BrightYellow);
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.wrapper.right .detail {
+  color: var(--color-LightGray);
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+  }
+  .container .left {
+    border-radius: 0 0 0 0.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 2rem;
+  }
+  .wrapper.left .detail {
+    margin-bottom: 1.5rem;
+  }
+  .container .right {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
+
+/*# sourceMappingURL=main_styles.css.map */
